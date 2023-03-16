@@ -1,9 +1,10 @@
+import Router from './routes/Router'
 import './App.scss'
 
 function App() {
   return (
     <div className="App">
-      <h1>你好</h1>
+      <Router />
     </div>
   )
 }

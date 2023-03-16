@@ -1,0 +1,28 @@
+@use "../../../styles/mixin";
+
+.input__container {
+  position: relative;
+  padding-top: 0.5rem;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f5f8fa;
+  border-radius: 2px 2px 4px 4px;
+}
+
+.input__label {
+  z-index: 1;
+  margin: 0 1rem;
+  @include mixin.font-setting(0.9rem, 400, color.$gray-8);
+}
+
+.input {
+  bottom: 10px;
+  margin: 0 1rem;
+  padding: 0;
+  border: none;
+  background-color: inherit;
+  @include mixin.font-setting(1rem, 400, color.$gray-10);
+}
