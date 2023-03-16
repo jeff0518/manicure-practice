@@ -16,6 +16,7 @@
     &__title {
       @include mixin.font-setting(1.5rem, 700, color.$gray-10);
       line-height: 4rem;
+      letter-spacing: 0.5rem;
     }
   }
 
@@ -78,5 +79,42 @@
 
   &__hamburger::before {
     bottom: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .toggle__label {
+    display: none;
+  }
+
+  .nav__menu {
+    all: unset;
+
+    &__item {
+      margin: 0;
+      opacity: 1;
+    }
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+
+    &__brand {
+      grid-column: 2 / 3;
+    }
+
+    &__menu {
+      grid-column: 3 / 4;
+
+      &__list {
+        height: 100%;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: end;
+        align-items: center;
+        grid-gap: 2rem;
+      }
+    }
   }
 }

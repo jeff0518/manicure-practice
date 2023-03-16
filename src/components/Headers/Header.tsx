@@ -5,7 +5,7 @@ import style from "./Header.module.scss";
 const Header = () => {
   return (
     <header className={style.nav}>
-      <Link to="/home" className="nav__brand">
+      <Link to="/home" className={style.nav__brand}>
         {/* <div className="nav__brand__logo">
           <img className="nav__brand__img" src="" alt="logo"/>
         </div> */}
