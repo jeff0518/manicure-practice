@@ -4,7 +4,7 @@ import style from './Auth.module.scss'
 const Auth = () => {
   return (
     <div className={style.container}>
-      <AuthForm />
+      <AuthForm title="登入" text="管理者登入" />
     </div>
   );
 };
