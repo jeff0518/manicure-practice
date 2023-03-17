@@ -1,0 +1,19 @@
+@use '../../styles/mixin';
+@use '../../styles/color' as color;
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2rem;
+
+  &__title {
+    @include mixin.font-setting(1.75rem, 700, color.$gray-11);
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
