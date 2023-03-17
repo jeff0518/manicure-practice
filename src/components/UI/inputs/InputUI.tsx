@@ -4,6 +4,7 @@ const InputUI: React.FC<{
   inputId: string;
   inputName: string;
   name: string;
+  inputPlaceHolder: string;
   inputType: string;
   inputValue: string;
   onChange: () => void;
@@ -16,10 +17,11 @@ const InputUI: React.FC<{
           id={props.inputId}
           name={props.name}
           className={style.input}
+          placeholder={props.inputPlaceHolder}
           type={props.inputType}
           value={props.inputValue}
           onChange={props.onChange}
-        ></input>
+        />
       </label>
     </>
   );

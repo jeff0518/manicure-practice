@@ -1,4 +1,5 @@
 @use "../../../styles/mixin";
+@use "../../../styles/color" as color;
 
 .input__container {
   position: relative;
@@ -7,22 +8,25 @@
   height: 65px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #f5f8fa;
   border-radius: 2px 2px 4px 4px;
 }
 
 .input__label {
-  z-index: 1;
   margin: 0 1rem;
-  @include mixin.font-setting(0.9rem, 400, color.$gray-8);
+  @include mixin.font-setting(0.8rem, 400, color.$gray-10);
 }
 
 .input {
-  bottom: 10px;
   margin: 0 1rem;
   padding: 0;
   border: none;
-  background-color: inherit;
+
+    background-color: inherit;
   @include mixin.font-setting(1rem, 400, color.$gray-10);
+}
+
+.input::placeholder {
+  @include mixin.font-setting(0.8rem, 400, color.$gray-6);
 }

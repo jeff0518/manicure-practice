@@ -1,8 +1,12 @@
+import RegisterForm from '../components/Auth/RegisterForm'
+
+import style from "./Auth.module.scss";
+
 const Register = () => {
   return (
-    <>
-      <h1>這是註冊頁</h1>
-    </>
+    <div className={style.container}>
+      <RegisterForm />
+    </div>
   );
 };
 
