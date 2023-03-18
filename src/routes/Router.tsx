@@ -5,6 +5,7 @@ import Register from "../pages/Register";
 import Home from "../pages/Home";
 import AdminLogin from "../pages/AdminLogin";
 import RootLayout from "./RootLayout";
+import Reserve from "../pages/Reserve";
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -12,10 +13,11 @@ const Router = () => {
       path: "/",
       element: <RootLayout />,
       children: [
-        { path: "/auth", element: <Auth /> },
-        { path: "/register", element: <Register /> },
-        { path: "/admin", element: <AdminLogin />, children: [] },
-        { path: "/home", element: <Home />, children: [] },
+        { index: true, element: <Home /> },
+        { path: "auth", element: <Auth /> },
+        { path: "register", element: <Register /> },
+        { path: "reserve", element: <Reserve /> },
+        { path: "admin", element: <AdminLogin />, children: [] },
       ],
     },
   ]);

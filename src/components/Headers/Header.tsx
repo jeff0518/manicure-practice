@@ -19,17 +19,17 @@ const Header = () => {
       <div className={style.nav__menu}>
         <ul className={style.nav__menu__list}>
           <li className={style.nav__menu__item}>
-            <Link to="" className={style.nav__menu__link}>
-              最新消息
+            <Link to="/" className={style.nav__menu__link}>
+              關於我們
             </Link>
           </li>
           <li className={style.nav__menu__item}>
-            <Link to="" className={style.nav__menu__link}>
+            <Link to="/reserve" className={style.nav__menu__link}>
               我要預約
             </Link>
           </li>
           <li className={style.nav__menu__item}>
-            <Link to="" className={style.nav__menu__link}>
+            <Link to="/auth" className={style.nav__menu__link}>
               登出
             </Link>
           </li>

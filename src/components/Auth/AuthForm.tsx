@@ -14,7 +14,6 @@ const AuthForm: React.FC<{ title: string; text: string }> = (props) => {
         <InputUI
           inputId="account"
           inputName="帳號"
-          name="帳號"
           inputPlaceHolder="請輸入帳號"
           inputType="text"
           inputValue=""
@@ -24,7 +23,6 @@ const AuthForm: React.FC<{ title: string; text: string }> = (props) => {
         <InputUI
           inputId="password"
           inputName="密碼"
-          name="密碼"
           inputPlaceHolder="請輸入密碼"
           inputType="password"
           inputValue=""

@@ -11,8 +11,7 @@ const RegisterForm = () => {
       <div className={style.input__container}>
         <InputUI
           inputId="userName"
-          inputName="名稱"
-          name="名稱"
+          inputName="姓名"
           inputPlaceHolder="怎麼稱呼您"
           inputType="text"
           inputValue=""
@@ -22,7 +21,6 @@ const RegisterForm = () => {
         <InputUI
           inputId="account"
           inputName="帳號"
-          name="帳號"
           inputPlaceHolder="請輸入您的帳號"
           inputType="text"
           inputValue=""
@@ -32,7 +30,6 @@ const RegisterForm = () => {
         <InputUI
           inputId="password"
           inputName="密碼"
-          name="密碼"
           inputPlaceHolder="請輸入密碼"
           inputType="password"
           inputValue=""
@@ -42,7 +39,6 @@ const RegisterForm = () => {
         <InputUI
           inputId="checkPassword"
           inputName="確認密碼"
-          name="確認密碼"
           inputPlaceHolder="請再次輸入密碼"
           inputType="password"
           inputValue=""

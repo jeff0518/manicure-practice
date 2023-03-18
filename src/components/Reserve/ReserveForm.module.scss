@@ -11,9 +11,4 @@
   &__title {
     @include mixin.font-setting(1.75rem, 700, color.$gray-11);
   }
-
-  &__actions {
-    display: flex;
-    justify-content: flex-end;
-  }
 }
