@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import AdminLogin from "../pages/AdminLogin";
 import RootLayout from "./RootLayout";
 import Reserve from "../pages/Reserve";
+import Schedule from "../pages/admin/Schedule";
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -17,8 +18,13 @@ const Router = () => {
         { path: "auth", element: <Auth /> },
         { path: "register", element: <Register /> },
         { path: "reserve", element: <Reserve /> },
-        { path: "admin", element: <AdminLogin />, children: [] },
+        { path: "admin", element: <AdminLogin /> },
       ],
+    },
+    {
+      path: "/admin",
+      element: <RootLayout />,
+      children: [{ path: "schedule", element: <Schedule /> }],
     },
   ]);
   return (
