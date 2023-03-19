@@ -58,7 +58,7 @@ const ReserveForm = (props) => {
   return (
     <form className={style.form}>
       <h1 className={style.form__title}>{props.title}</h1>
-      <div className={style.input__container}>
+      <div className={style.input__name}>
         <InputUI
           inputId="userName"
           inputName="姓名"
@@ -67,7 +67,7 @@ const ReserveForm = (props) => {
           inputValue=""
         />
       </div>
-      <div className={style.input__container}>
+      <div className={style.input__phone}>
         <InputUI
           inputId="phone"
           inputName="聯絡電話"
@@ -76,7 +76,7 @@ const ReserveForm = (props) => {
           inputValue=""
         />
       </div>
-      <div className={style.input__container}>
+      <div className={style.input__servicer}>
         <SelectUI
           selectId="servicer"
           selectName="服務人員"
@@ -84,7 +84,7 @@ const ReserveForm = (props) => {
           data={servicerData}
         />
       </div>
-      <div className={style.input__container}>
+      <div className={style.input__item}>
         <SelectUI
           selectId="item"
           selectName="服務項目"
@@ -92,7 +92,7 @@ const ReserveForm = (props) => {
           data={itemData}
         />
       </div>
-      <div className={style.input__container}>
+      <div className={style.input__people}>
         <SelectUI
           selectId="people"
           selectName="人數"
@@ -100,7 +100,7 @@ const ReserveForm = (props) => {
           data={PEOPLE_DATA}
         />
       </div>
-      <div className={style.input__container}>
+      <div className={style.input__date}>
         <InputUI
           inputId="date"
           inputName="日期"
@@ -108,7 +108,7 @@ const ReserveForm = (props) => {
           inputValue=""
         />
       </div>
-      <div className={style.input__container}>
+      <div className={style.input__time}>
         <SelectUI
           selectId="time"
           selectName="時間"
@@ -116,7 +116,9 @@ const ReserveForm = (props) => {
           data={timeData}
         />
       </div>
-      <ButtonUI btnStyle="btn__pill__large" text="提交" />
+      <div className={style.input__btn}>
+        <ButtonUI btnStyle="btn__pill__large" text="提交" />
+      </div>
     </form>
   );
 }

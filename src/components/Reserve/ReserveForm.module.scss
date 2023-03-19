@@ -1,5 +1,5 @@
-@use '../../styles/mixin';
-@use '../../styles/color' as color;
+@use "../../styles/mixin";
+@use "../../styles/color" as color;
 
 .form {
   width: 100%;
@@ -10,5 +10,54 @@
 
   &__title {
     @include mixin.font-setting(1.75rem, 700, color.$gray-11);
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .form {
+    all: unset;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 2rem repeat(4, 1fr);
+    grid-gap: 2rem;
+    grid-template-areas:
+      "title title title title title title"
+      "name name name phone phone phone"
+      "servicer servicer item item people people"
+      "date date date time time time"
+      "btn btn btn btn btn btn";
+  }
+
+  .form__title {
+    grid-area: title;
+  }
+
+  .input__name {
+    grid-area: name;
+  }
+
+  .input__phone {
+    grid-area: phone;
+  }
+
+  .input__servicer {
+    grid-area: servicer;
+  }
+  .input__item {
+    grid-area: item;
+  }
+  .input__people {
+    grid-area: people;
+  }
+
+  .input__date {
+    grid-area: date;
+  }
+  .input__time {
+    grid-area: time;
+  }
+  .input__btn {
+    grid-area: btn;
   }
 }
