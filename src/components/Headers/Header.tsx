@@ -1,11 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import style from "./Header.module.scss";
 
 const Header = () => {
+  const  toLink = useLocation()
+  let judge = true 
+
+  if (toLink.pathname.includes("/admin")) {
+    judge = false;
+  }
   return (
     <header className={style.nav}>
-      <Link to="/home" className={style.nav__brand}>
+      <Link to="/" className={style.nav__brand}>
         {/* <div className="nav__brand__logo">
           <img className="nav__brand__img" src="" alt="logo"/>
         </div> */}
@@ -19,8 +25,11 @@ const Header = () => {
       <div className={style.nav__menu}>
         <ul className={style.nav__menu__list}>
           <li className={style.nav__menu__item}>
-            <Link to="/" className={style.nav__menu__link}>
-              關於我們
+            <Link
+              to={judge ? "/" : "/admin/schedule"}
+              className={style.nav__menu__link}
+            >
+              {judge ? "關於我們" : "工作排程"}
             </Link>
           </li>
           <li className={style.nav__menu__item}>

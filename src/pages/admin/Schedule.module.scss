@@ -1,0 +1,13 @@
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 10vh 0 5vh;
+}
+
+@media screen and (mix-width: 820px) {
+  .container {
+    width: 95vw;
+    margin: 0 auto;
+    padding: 15vh 0 10vh;
+  }
+}
