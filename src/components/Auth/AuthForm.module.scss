@@ -8,10 +8,6 @@
   align-items: stretch;
   gap: 2rem;
 
-  .input__container {
-    
-  }
-
   &__title {
     @include mixin.font-setting(1.75rem, 700, color.$gray-11);
   }
