@@ -1,5 +1,9 @@
+@use "../styles/mixin";
+@use "../styles/color" as color;
+
 .container {
   width: 70vw;
   margin: 0 auto;
   padding: 15vh 0 10vh;
 }
+
