@@ -6,7 +6,7 @@ const InputUI: React.FC<{
   inputPlaceHolder: string;
   inputType: string;
   inputValue: string;
-  onChange: () => void;
+  onChange: (action: any) => void;
 }> = (props) => {
   return (
     <>
@@ -18,7 +18,9 @@ const InputUI: React.FC<{
           placeholder={props.inputPlaceHolder}
           type={props.inputType}
           value={props.inputValue}
-          onChange={props.onChange}
+          onChange={(e) =>
+            props.onChange({ type: props.inputId, payload: e.target.value })
+          }
         />
       </label>
     </>
