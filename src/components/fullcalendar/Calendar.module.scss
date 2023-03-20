@@ -2,13 +2,13 @@
   width: 95vw;
   margin: 0 auto;
   padding: 15vh 0 10vh;
-}
 
-.fc .fc-toolbar-title {
-  color: red;
-}
+  .fc .fc-toolbar-title {
+    flex-direction: column;
+  }
 
-.fc .fc-toolbar.fc-header-toolbar {
-  display: flex !important;
-  flex-direction: column !important;
+  .fc .fc-toolbar.fc-header-toolbar {
+    display: flex !important;
+    flex-direction: column !important;
+  }
 }
