@@ -1,5 +1,9 @@
 import { useRef, useContext, useState, useReducer, useEffect } from "react";
 import RegisterForm from "../components/Auth/RegisterForm";
+import {
+  CurrentContext,
+  GetCurrentUserContext,
+} from "../components/contexts/usersContext/CurrentUserContext";
 
 import style from "./Auth.module.scss";
 
@@ -35,18 +39,17 @@ const Register = () => {
   const [inputValues, dispatch] = useReducer(inputReducer, initialInput);
   const [errorMessage, setErrorMessage] = useState({});
   const formIsValid = useRef("true");
+  const currentCtx = useContext(CurrentContext);
+  const getCurrentCtx = useContext(GetCurrentUserContext);
 
   const inputChangeHandler = (action: { type: string; payload: string }) => {
     const { type, payload } = action;
     dispatch(action);
   };
 
-  const submitHandler = (event: React.FormEvent) => {
-    event.preventDefault();
-    console.log("submit");
-
+  const isValid = () => {
     setErrorMessage({});
-
+    
     if (inputValues.userName.trim().length === 0) {
       setErrorMessage((prevMessage) => ({
         ...prevMessage,
@@ -75,9 +78,20 @@ const Register = () => {
       }));
       formIsValid.current = "false";
     }
+  } 
 
+  const submitHandler = (event: React.FormEvent) => {
+    event.preventDefault();
+    const inputValuesData = inputValues
+    isValid()
     if (formIsValid.current !== "true") return;
+    console.log('這裡是註冊頁：');
+    console.log(inputValues);
+    
+    getCurrentCtx(inputValues);
   };
+  console.log(currentCtx);
+  
   return (
     <div className={style.container}>
       <RegisterForm

@@ -2,24 +2,27 @@ import { useRef, useContext, useState, useReducer, useEffect } from "react";
 import { Link } from "react-router-dom";
 import InputUI from "../UI/inputs/InputUI";
 import ButtonUI from "../UI/buttons/ButtonUI";
-// import { CurrentContext } from "../contexts/usersContext/CurrentUserContext";
+// import { CurrentContext, GetCurrentUserContext } from "../contexts/usersContext/CurrentUserContext";
 import style from "./RegisterForm.module.scss";
-
-type RegisterPageProps = {
-  inputValues: {  userName: string;
+export type inputProps = {
+  userName: string;
   account: string;
   password: string;
-  checkPassword: string;};
-  errorMessage: {};
+  checkPassword: string;
+};
+
+type RegisterPageProps = {
+  inputValues: inputProps;
+  errorMessage: inputProps;
   formIsValid: React.MutableRefObject<string>;
   inputChangeHandler: (action: { type: string; payload: string }) => void;
   submitHandler: (event: React.FormEvent) => void;
-}
+};
 
 const RegisterForm = (props: RegisterPageProps) => {
   const errorMessage = props.errorMessage;
-  console.log(errorMessage);
-  
+
+
   return (
     <form className={style.form} onSubmit={props.submitHandler}>
       <h1 className={style.form__title}>建立您的帳號</h1>
